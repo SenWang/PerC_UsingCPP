@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 
 #include "util_render.h"
 #include "util_pipeline.h"
@@ -7,17 +7,17 @@
 int main(int argc, char* argv[]) 
 {
 	using namespace std ;
-	cout << "±Ò°ÊÄá¼v¾÷" << endl ;
+	cout << "å•Ÿå‹•æ”å½±æ©Ÿ" << endl ;
 	UtilPipeline pp;
 	pp.EnableImage(PXCImage::COLOR_FORMAT_RGB32);
 	pp.EnableImage(PXCImage::COLOR_FORMAT_DEPTH);
 	pp.Init();
 
-	cout << "³]©wGUI" << endl ;
-	UtilRender color_render(L"±m¦â¼v¹³");
-	UtilRender depth_render(L"²`«×¼v¹³");
+	cout << "è¨­å®šGUI" << endl ;
+	UtilRender color_render(L"å½©è‰²å½±åƒ");
+	UtilRender depth_render(L"æ·±åº¦å½±åƒ");
 
-	cout << "¶}©l±µ¦¬¼v¹³" << endl ;
+	cout << "é–‹å§‹æŽ¥æ”¶å½±åƒ" << endl ;
 	for (;;) 
 	{
 		if (!pp.AcquireFrame(true)) 
@@ -33,7 +33,7 @@ int main(int argc, char* argv[])
 		pp.ReleaseFrame();
 	}
 	pp.Close();
-	cout << "Ãö³¬Äá¼v¾÷" << endl ;
+	cout << "é—œé–‰æ”å½±æ©Ÿ" << endl ;
 
 	return 0;
 }
