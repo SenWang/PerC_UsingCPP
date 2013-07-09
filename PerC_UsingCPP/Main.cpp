@@ -18,7 +18,7 @@ int main(int argc, char* argv[])
 	UtilRender depth_render(L"深度影像");
 
 	cout << "開始接收影像" << endl ;
-	for (;;) 
+	while(true)
 	{
 		if (!pp.AcquireFrame(true)) 
 			break;
@@ -37,3 +37,4 @@ int main(int argc, char* argv[])
 
 	return 0;
 }
+
